@@ -1,0 +1,30 @@
+production:
+  imap_host: <incoming-mail-server-here>
+  imap_port: 993
+  imap_username: <email-address>
+  imap_password: <email-password>
+  smtp_host: <outgoing-mail-server-here>
+  smtp_port: 465
+  smtp_username: <email-address>
+  smtp_password: <email-password>
+
+development:
+  imap_host: <incoming-mail-server-here>
+  imap_port: 993
+  imap_username: <email-address>
+  imap_password: <email-password>
+  smtp_host: <outgoing-mail-server-here>
+  smtp_port: 465
+  smtp_username: <email-address>
+  smtp_password: <email-password>
+
+test:
+  imap_host: <incoming-mail-server-here>
+  imap_port: 993
+  imap_username: <email-address>
+  imap_password: <email-password>
+  smtp_host: <outgoing-mail-server-here>
+  smtp_port: 465
+  smtp_username: <email-address>
+  smtp_password: <email-password>
+

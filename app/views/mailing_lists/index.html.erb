@@ -1,0 +1,28 @@
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag 'style', :plugin => 'redmine_patch_mine' %>
+<% end %>
+
+<h2>Mailing Lists</h2>
+<%= link_to "New", { :action => :new } %>
+<hr/>
+
+<div id="mailing_lists_index">
+<% @mailing_lists.each { |list| %>
+<div class="mailing_lists_index_item">
+  <div class="mailing_list_column">
+  <%= list.name %>
+  </div>
+
+  <div class="mailing_list_column">
+  <%= link_to "Edit",   { :action => :edit,    :id     => list.id } %>
+  </div>
+
+  <div class="mailing_list_column">
+  <%= link_to "Delete", { :action => :delete,  :id     => list.id } %>
+  </div>
+
+  <div style="clear: both;"></div>
+                        
+</div>
+<% } %>
+</div>

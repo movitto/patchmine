@@ -1,0 +1,13 @@
+.mailing_list_column {
+  width: 20%;
+  float: left;
+}
+
+.form_label{
+  width: 100px;
+  float: left;
+  margin-top: 10px;
+}
+
+.form_field{
+}

@@ -1,0 +1,8 @@
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag 'style', :plugin => 'redmine_patch_mine' %>
+<% end %>
+
+<h2>Create New Mailing List</h2>
+
+<%= render :partial   =>   'form',
+           :locals    => { :action => :create } %>

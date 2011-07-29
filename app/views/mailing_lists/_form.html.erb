@@ -1,0 +1,25 @@
+<% form_for :mailing_list, @mailing_list, :url => { :action => action, :id => @mailing_list.id } do |f| %>
+  <%= f.hidden_field :id    %>
+
+  <div class="form_row">
+  <div class="form_label">
+  <%= f.label      :name    %>
+  </div>
+  <div class="form_field">
+  <%= f.text_field :name    %>
+  </div>
+  </div>
+
+  <div class="form_row">
+  <div class="form_label">
+  <%= f.label      :address    %>
+  </div>
+  <div class="form_field">
+  <%= f.text_field :address %>
+  </div>
+  </div>
+
+  <div class="form_row">
+  <%= submit_tag   "Create" %>
+  </div>
+<% end %>
