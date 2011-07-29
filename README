@@ -1,0 +1,8 @@
+PatchMine
+
+An Open Source Redmine Patch Tracking Plugin
+
+Simply 
+  $ cd {RAILS_ROOT}/vendor/plugins
+  $ git clone git://github.com/movitto/patchmine.git
+  $ mv patchmine redmine_patch_mine
