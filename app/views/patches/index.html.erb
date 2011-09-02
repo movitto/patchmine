@@ -1,0 +1,6 @@
+<!-- TODO sort by date, other better gfx options -->
+<h2>Patches for <%= @issue.name %></h2>
+
+<%- @patches.each { |p| %>
+  <%= p.subject %> - <%= p.mailing_list %>
+<% } %>

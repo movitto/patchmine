@@ -1,0 +1,13 @@
+<h2>Patch: <%= @patch.subject %></h2>
+Message ID: <%= @patch.message_id %>
+Mailing List <%= @patch.mailing_list.name %>
+Issue: <%= @patch.issue.name %>
+
+<%= @patch.content %>
+
+<hr/>
+
+Comments:
+<% @patch.comments.each { |c| %>
+  <%= c.content %>
+<% } %>

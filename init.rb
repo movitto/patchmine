@@ -1,5 +1,8 @@
 require 'redmine'
 
+require 'patch_mine/hooks'
+require 'patch_mine/issue_patch'
+
 Redmine::Plugin.register :redmine_patch_mine do
   name 'Redmine PatchMine plugin'
   author 'Mo Morsi'

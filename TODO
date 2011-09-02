@@ -1,58 +1,8 @@
-Design:
---------------
-The redmine plugin will need to do the following things
-
-- support email configuration such that a mailing list
-  can be subscribed to and any emails sent to it retreived
-  locally
-
-- parse every incoming message retrieved
-
-- allow user to configure mail filters relating to which
-  messages meet the patch criteria and to pull out issue number(s)
-  associated with the patch
-
-- update issues w/ id of the patch email, uri to patch mail
-  (versioning subsequent revisions), a copy of the patch 
-  itself, status indicating patch is on dev, etc
-
-- tie feedback to patch on mailing list into comments in redmine
-
-- tie updates and comments in redmine to replies to patch on list
-
-
-Implementation
----------------
-- create model files for:
-   - filters
-   - patches
-   - responses / comments
-   - ACKs / NACKs
-
-- provide web interace to CRUD this data
-
-- on incoming email handler, apply filters,
-  create new record in DB if mail is let through,
-  parse redmine metadata from email. Records may be
-    - patches
-    - responses / comments
-    - acks / nacks
-
-- associate patch records w/ redmine issues in db based
-  on parsed metadata, update the following depending on metadata
-    - add comments to patch from list comments
-    - change issue status when patch is sent to list
-    - change issue status when patch is ack'd
-
-- hook into issue page to display patch status (formatted
-   nicely)
-
-- hook into new comment lifecycle to repsond to patch on list
-   when new comment is posted via redmine
-
-
 Future (possible additions down the road)
 ---------------
+- mail filters, allow end-user to specify regex and other filters
+  to use to match and extract data from patches on list
+
 - expanded mail header integration
 
 - better patch / list visualization
@@ -60,3 +10,9 @@ Future (possible additions down the road)
 - list / patch traffic summaries and statistics
 
 - more patch sources (git repos, forums, etc)
+
+- automated redmine -> mailing list notifications 
+   (look into, this prolly is already done in some form or another)
+
+- allow user to specify workflow pertaining to changes in patch
+  states and new data created and what not upon patch arrival

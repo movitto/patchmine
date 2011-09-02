@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  patch_id: 1
+  content: MyString
+  resolution: MyString
+two:
+  id: 2
+  patch_id: 1
+  content: MyString
+  resolution: MyString

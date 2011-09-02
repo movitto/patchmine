@@ -1,0 +1,7 @@
+Patches:
+<%- issue.patches.each { |p| %>
+  <%= link_to p.subject, :controller => :patches, :action => :show, :id => p.id %>
+  <!--( <%= p.comments.collect { |c|
+          link_to "comment", :controller => :patches, :action => :show_comment, :id => c.id
+        }.join(', ') %> ) -->
+<% } %>

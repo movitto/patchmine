@@ -1,6 +1,7 @@
 class CreateMailingLists < ActiveRecord::Migration
   def self.up
     create_table :mailing_lists do |t|
+      t.column :project_id, :integer
       t.column :name, :string
       t.column :address, :string
     end
